@@ -6,6 +6,7 @@ from PIL import Image
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
+
 def img2tensor(image):
     """Convert PIL image to PyTorch tensor.
     """
@@ -22,11 +23,12 @@ def img2tensor(image):
 
 
 def fetch_model():
-    """Return a Resnet-50 model.
+    """Return a pretrained Resnet-50 model.
     """
     model = torchvision.models.resnet50()
     model.fc = torch.nn.Linear(in_features=2048, out_features=1)
-    model.load_state_dict(torch.load('model/model-resnet50.pth', map_location=device))
+    model.load_state_dict(torch.load(
+                            'model/model-resnet50.pth', map_location=device))
     return model
 
 

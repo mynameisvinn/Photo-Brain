@@ -1,7 +1,7 @@
 from ShowMe import inference
 
 from unittest import TestCase
-import os
+
 
 class TestPredict(TestCase):
 
@@ -12,5 +12,3 @@ class TestPredict(TestCase):
 
         fname = "./ShowMe/images/2.jpg"
         assert(round(inference(fname), 2) == 1.86)
-
-
