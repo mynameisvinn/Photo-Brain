@@ -7,7 +7,7 @@ import time
 
 # render page with streamlit
 st.set_option('deprecation.showfileUploaderEncoding', False)
-st.title("Predicting Instagrammable Images ")
+st.title("Casting Coin Photo Brain ")
 st.write("")
 file_up = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"] )
 
